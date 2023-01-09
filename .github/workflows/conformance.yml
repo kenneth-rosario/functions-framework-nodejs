@@ -25,7 +25,7 @@ jobs:
       run: npm install
 
     - name: Install conformance client
-      uses: GoogleCloudPlatform/functions-framework-conformance/.github/actions/client/install@v1.7.0
+      uses: GoogleCloudPlatform/functions-framework-conformance/.github/actions/client/install@v1.8.0
       with:
         client-version: v1.7.0
         cache-path: ~/client
