@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
+  "globalExtends": [
+    "config:base",
+    "group:allNonMajor"
   ],
   "packageRules": [
     {
@@ -9,26 +10,11 @@
       "matchUpdateTypes": [
         "major"
       ]
-    },
-    {
-      "description": "Create a PR grouping all non-major dependencies",
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch"
     }
   ],
   "ignorePaths": [
     "docs/**",
     "experimental/**"
   ],
-  "pinVersions": false,
-  "schedule": [
-    "every 3 months on the first day of the month"
-  ]
+  "pinVersions": false
 }
