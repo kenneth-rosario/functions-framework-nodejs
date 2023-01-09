@@ -1,9 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "globalExtends": [
-    "config:base",
-    "group:allNonMajor"
+    "config:base"
   ],
+  "extends": ["group:allNonMajor"],
   "packageRules": [
     {
       "description": "Create a PR whenever there is a new major version",
